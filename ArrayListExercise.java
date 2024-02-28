@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class ArrayListExercise {
     public static void main(String[] args) {
-        // Creating and initializing an ArrayList
+        
         ArrayList<String> colors = new ArrayList<>();
         colors.add("Red");
         colors.add("Green");
@@ -10,28 +10,22 @@ public class ArrayListExercise {
         colors.add("Yellow");
         colors.add("Orange");
 
-        // Iterating over the ArrayList
         System.out.println("Colors in the ArrayList:");
         for (String color : colors) {
             System.out.println(color);
         }
 
-        // Adding a new color at the third position
         colors.add(2, "Purple");
 
-        // Removing the second color from the ArrayList
         colors.remove(1);
 
-        // Printing the updated ArrayList
         System.out.println("\nUpdated ArrayList after adding and removing elements:");
         System.out.println(colors);
 
-        // Searching for an element
         String searchColor = "Blue";
         System.out.println("\nSearching for color '" + searchColor + "':");
         searchColor(colors, searchColor);
 
-        // Removing duplicates
         ArrayList<String> colorsWithDuplicates = new ArrayList<>(colors);
         colorsWithDuplicates.add("Red");
         colorsWithDuplicates.add("Green");
@@ -44,7 +38,6 @@ public class ArrayListExercise {
         System.out.println(removeDuplicates(colorsWithDuplicates));
     }
 
-    // Method to search for a color in the ArrayList
     public static void searchColor(ArrayList<String> colors, String searchTerm) {
         int position = colors.indexOf(searchTerm);
         if (position != -1) {
@@ -54,7 +47,6 @@ public class ArrayListExercise {
         }
     }
 
-    // Method to remove duplicates from an ArrayList
     public static ArrayList<String> removeDuplicates(ArrayList<String> list) {
         ArrayList<String> result = new ArrayList<>();
         for (String element : list) {
